@@ -7,7 +7,42 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<app-comp-a  [amount]="'1000'" [location]="'Hyd'"  >
+<!--<app-comp-a [amount]="'1000'" [location]="'Hyd'"  >
     <input type="text" [value]="'John'" #firstname>
-    </app-comp-a>
+     </app-comp-a>
+
+<h2>Parent Component</h2>
+<input [(ngModel)]="parentData" placeholder="Enter some text" />
+<app-comp-b [data]="parentData"></app-comp-b>
+<h1>Welcome to Angular Lifecycle Hooks</h1>
+<p>{{message}}</p>
+<h1>Parnt Component</h1>
+<app-comp-b>
+    <p #content>This paragraph is sent from the parent component!</p>
+</app-comp-b>
+
+
+<app-comp-b>
+<h1>Parent module</h1>
+</app-comp-b> -->
+
+
+<!--<h3>ngDoCheck Example (simple)</h3>
+<app-comp-b [student]="student"></app-comp-b>
+<button (click)="changeName()">Change Name</button>-->
+
+<!--<h2>Parent Component</h2>
+<button (click)="changeContent()">ChangeContent</button>
+<app-comp-b>
+    <p>{{content}}</p>
+</app-comp-b>-->
+
+<!--<h2>Parent Component</h2>
+<button (click)="changeContent()">ChangeContent</button>
+<app-comp-b [message]="message"></app-comp-b>-->
+
+
+<h2>Parent Component</h2>
+<app-comp-b></app-comp-b>
+
 

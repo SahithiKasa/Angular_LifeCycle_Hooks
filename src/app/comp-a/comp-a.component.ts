@@ -10,8 +10,7 @@ import { Component,
    AfterContentChecked,
    AfterViewChecked,
    ElementRef,
-   ViewChild,
-   SimpleChanges
+   ViewChild
   } from '@angular/core';
 
 @Component({
@@ -55,13 +54,12 @@ AfterViewChecked , OnDestroy {
 
   //angular
   //@Input handle
-
   ngOnChanges(): void {
         console.log("R u working????");
-        this.amount = Number(this.amount) + 500;  //"1000"
+        this.amount = Number(this.amount) + 200;  //"1000"
 
         if(this.location == 'Hyd'){
-             this.designation = "Software programmer"
+             this.designation = "Software engineer"
         }
 
         console.log("ngonchanges loaded");
@@ -98,7 +96,7 @@ AfterViewChecked , OnDestroy {
 
 
   studentname = 'Ramu';
-  userLocation = "Chennai";
+  userLocation = "";
 
 //handle the view related stuff then you can use this hook
 
@@ -108,10 +106,10 @@ AfterViewChecked , OnDestroy {
      this.midname.nativeElement.style.background ="red";          //<input type="text" [value]="studentname" #midname />
 
      setTimeout(() => {
-       this.studentname = "Sahithi";
+       this.studentname = "Rahul";
        this.userLocation = this.studentname + "From US";
        
-     }, 3000);
+     }, 5000);
   }
   
 
@@ -125,12 +123,11 @@ AfterViewChecked , OnDestroy {
     
   }
 
-  ngAfterViewChecked():void {
+  ngAfterViewChecked(): void {
     
   }
   
 
-  
 
 
 }
